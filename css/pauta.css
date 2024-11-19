@@ -1,3 +1,6 @@
+/* Importamos la fuente Montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
 body {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
@@ -6,10 +9,14 @@ body {
     color: #333;
 }
 
+/* Estilos del header */
 header {
+    position: absolute;
+    top: 0;
+    width: 100%;
     background: rgba(255, 255, 255, 0.8);
     padding: 10px 0;
-    text-align: center;
+    z-index: 10;
 }
 
 header nav ul {
@@ -24,7 +31,7 @@ header nav ul {
 header nav ul li a {
     text-decoration: none;
     font-weight: bold;
-    color: #ff007b;
+    color: #eb05c8;
     transition: color 0.3s ease;
 }
 
@@ -32,15 +39,15 @@ header nav ul li a:hover {
     color: #1ed2f4;
 }
 
+/* Banner */
 .banner {
     text-align: center;
-    padding: 50px 20px;
+    padding: 100px 20px 50px 20px;
     color: #fff;
-    background: rgba(255, 255, 255, 0.2);
 }
 
 .banner h1 {
-    font-size: 2.5em;
+    font-size: 3em;
     margin: 0 0 10px 0;
 }
 
@@ -48,13 +55,20 @@ header nav ul li a:hover {
     font-size: 1.2em;
 }
 
+/* Contenedor del formulario */
 .form-container {
-    background: #fff;
-    padding: 30px;
-    margin: 20px auto;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    margin: 100px auto 20px auto;
     border-radius: 10px;
     max-width: 800px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h2 {
+    text-align: center;
+    color: #ff007b;
+    margin-bottom: 30px;
 }
 
 form {
@@ -65,14 +79,22 @@ form {
 
 label {
     font-weight: bold;
+    color: #333;
 }
 
 input, select, textarea {
-    padding: 10px;
+    padding: 12px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 1em;
     width: 100%;
+    box-sizing: border-box;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: #ff007b;
+    box-shadow: 0 0 5px rgba(255, 0, 123, 0.5);
 }
 
 textarea {
@@ -80,7 +102,7 @@ textarea {
 }
 
 .submit-button {
-    background: #ff007b;
+    background: #eb05c8;
     color: #fff;
     border: none;
     padding: 15px;
@@ -88,8 +110,25 @@ textarea {
     font-size: 1.2em;
     cursor: pointer;
     transition: background 0.3s ease;
+    margin-top: 20px;
 }
 
 .submit-button:hover {
-    background: #e6006a;
+    background: #b8039d;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .header-content nav ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .banner {
+        padding: 80px 20px 30px 20px;
+    }
+
+    .banner h1 {
+        font-size: 2.5em;
+    }
 }
