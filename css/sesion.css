@@ -1,110 +1,160 @@
+/* General Styles */
 body {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
     background: linear-gradient(180deg, #ff007b, #1ed2f4);
-    color: #fff;
+    color: #333;
 }
 
-header {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 15px;
+/* Barra de Navegación */
+.navigation-bar {
+    background-color: #ff007b; /* Color de fondo vibrante */
+    padding: 15px 0;
     text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
 }
 
-header nav ul {
+.navigation-bar ul {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 30px; /* Espaciado entre elementos */
 }
 
-header nav ul li a {
-    color: #fff;
+.navigation-bar ul li {
+    display: inline-block;
+}
+
+.navigation-bar ul li a {
     text-decoration: none;
+    color: white; /* Texto blanco */
     font-weight: bold;
+    font-size: 1.2em; /* Tamaño del texto */
+    padding: 10px 20px;
+    transition: color 0.3s ease, background-color 0.3s ease;
 }
 
-header nav ul li a:hover {
-    color: #ff007b;
+.navigation-bar ul li a:hover {
+    color: #1ed2f4; /* Cambia el color al pasar el cursor */
 }
 
-.main-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 50px 20px;
+.navigation-bar ul li a.active {
+    background-color: #e6006a; /* Resalta el menú activo */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+/* Ajustes para móviles */
+@media (max-width: 768px) {
+    .navigation-bar ul {
+        flex-direction: column;
+        gap: 15px; /* Espaciado vertical */
+    }
+
+    .navigation-bar ul li a {
+        padding: 10px;
+        font-size: 1em;
+    }
+}
+
+/* Banner */
+.banner {
     text-align: center;
+    padding: 100px 20px 50px 20px;
+    color: #fff;
 }
 
-.content {
-    max-width: 800px;
+.banner h1 {
+    font-size: 3em;
+    margin: 0 0 10px 0;
+}
+
+.banner p {
+    font-size: 1.2em;
+}
+
+/* Contenedor del Formulario */
+.form-container {
     background: rgba(255, 255, 255, 0.9);
-    color: #333;
-    padding: 20px;
+    padding: 40px;
+    margin: 150px auto 20px auto; /* Ajustado para que quede debajo del header */
     border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.text-section h1 {
-    font-size: 2.5em;
+.form-container h2 {
+    text-align: center;
     color: #ff007b;
-    margin: 0;
-}
-
-.text-section h2 {
-    font-size: 1.5em;
-    color: #1ed2f4;
-    margin: 5px 0;
-}
-
-.text-section p {
-    font-size: 1em;
-    margin: 10px 0;
-    color: #333;
-}
-
-.form-section {
-    margin-top: 20px;
+    margin-bottom: 30px;
 }
 
 form {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    gap: 15px;
 }
 
 label {
-    margin-top: 10px;
     font-weight: bold;
     color: #333;
 }
 
-input[type="text"],
-input[type="email"] {
-    padding: 10px;
-    margin-top: 5px;
+input, select, textarea {
+    padding: 12px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 1em;
     width: 100%;
-    max-width: 400px;
+    box-sizing: border-box;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: #ff007b;
+    box-shadow: 0 0 5px rgba(255, 0, 123, 0.5);
+}
+
+textarea {
+    resize: none;
 }
 
 .submit-button {
-    margin-top: 20px;
-    background-color: #ff007b;
+    background: #eb05c8;
     color: #fff;
-    padding: 12px 20px;
     border: none;
+    padding: 15px;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 1.2em;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background 0.3s ease;
+    margin-top: 20px;
 }
 
 .submit-button:hover {
-    background-color: #e6006a;
+    background: #b8039d;
+}
+
+/* Sección de Imágenes (opcional, si usas imágenes) */
+.images-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin: 50px auto;
+    padding: 20px;
+    max-width: 900px;
+}
+
+.images-section img {
+    width: 100%;
+    max-width: 800px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
