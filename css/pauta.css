@@ -1,0 +1,69 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+}
+
+.pricing-container {
+    width: 90%;
+    max-width: 600px;
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.icon img {
+    width: 50px;
+    margin-bottom: 20px;
+}
+
+.plans {
+    font-weight: 600;
+}
+
+.plan h2 {
+    font-size: 18px;
+    color: #333;
+    margin-top: 20px;
+    font-weight: 700;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    font-weight: 600;
+    color: #6d28d9;
+    font-size: 16px;
+}
+
+.pricing-detail {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #ddd;
+    padding: 10px 0;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.pricing-detail:first-of-type {
+    border-top: none;
+}
+
+.price-dollars {
+    color: #333;
+    font-weight: 700;
+}
+
+.price-euros {
+    color: #6d28d9; /* Color violeta como en la imagen */
+    font-weight: 700;
+}
