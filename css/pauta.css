@@ -28,86 +28,61 @@ body {
 }
 /* Estilos del header */
 /* General Header Styles */
-header {
-    background-color: #333; /* Color oscuro para el fondo */
-    padding: 10px 20px;
+/* Barra de Navegación */
+.navigation-bar {
+    background-color: #ff007b; /* Color de fondo vibrante */
+    padding: 15px 0;
+    text-align: center;
     position: fixed;
     width: 100%;
+    top: 0;
     z-index: 1000;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
 }
 
-header .menu-toggle {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-}
-
-header .menu-toggle div {
-    width: 25px;
-    height: 3px;
-    background-color: #1ed2f4;
-    margin: 5px 0;
-}
-
-/* Desktop Navigation */
-header .navigation {
-    display: flex;
-}
-
-header .navigation ul {
-    display: flex;
+.navigation-bar ul {
     list-style: none;
-    gap: 30px;
     padding: 0;
     margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Espaciado entre elementos */
 }
 
-header .navigation ul li a {
+.navigation-bar ul li {
+    display: inline-block;
+}
+
+.navigation-bar ul li a {
     text-decoration: none;
-    color: #1ed2f4;
+    color: white; /* Texto blanco */
     font-weight: bold;
-    transition: color 0.3s ease;
+    font-size: 1.2em; /* Tamaño del texto */
+    padding: 10px 20px;
+    transition: color 0.3s ease, background-color 0.3s ease;
 }
 
-header .navigation ul li a:hover {
-    color: #ff007b;
+.navigation-bar ul li a:hover {
+    color: #1ed2f4; /* Cambia el color al pasar el cursor */
 }
 
-/* Mobile Navigation */
+.navigation-bar ul li a.active {
+    background-color: #e6006a; /* Resalta el menú activo */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+/* Ajustes para móviles */
 @media (max-width: 768px) {
-    header .menu-toggle {
-        display: flex;
-    }
-
-    header .navigation {
-        display: none; /* Oculto por defecto en móvil */
+    .navigation-bar ul {
         flex-direction: column;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        background-color: #333;
-        width: 100%;
-        padding: 10px 0;
+        gap: 15px; /* Espaciado vertical */
     }
 
-    header .navigation.nav-active {
-        display: flex; /* Mostrar al activarlo */
-    }
-
-    header .navigation ul {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    header .navigation ul li a {
-        text-align: center;
-        padding: 10px 0;
+    .navigation-bar ul li a {
+        padding: 10px;
+        font-size: 1em;
     }
 }
-
 
 /* Banner */
 .banner {
