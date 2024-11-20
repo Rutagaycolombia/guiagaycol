@@ -4,126 +4,132 @@ body {
     margin: 0;
     padding: 0;
     background: linear-gradient(180deg, #ff007b, #1ed2f4); /* Fondo degradado */
-    color: #333;
+    color: #fff;
 }
 
 /* Barra de Navegación */
-.navigation-bar {
-    background-color: #ff007b; /* Color de fondo vibrante */
-    padding: 15px 0;
+header {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
     text-align: center;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
 }
 
-.navigation-bar ul {
+header nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
     justify-content: center;
-    gap: 30px; /* Espaciado entre elementos */
+    gap: 30px;
 }
 
-.navigation-bar ul li a {
+header nav ul li a {
+    color: #fff;
     text-decoration: none;
-    color: white; /* Texto blanco */
     font-weight: bold;
-    font-size: 1.2em;
-    padding: 10px 20px;
-    transition: color 0.3s ease, background-color 0.3s ease;
 }
 
-.navigation-bar ul li a:hover {
-    color: #1ed2f4; /* Cambia el color al pasar el cursor */
-}
-
-.navigation-bar ul li a.active {
-    background-color: #e6006a; /* Resalta el menú activo */
-    border-radius: 5px; /* Bordes redondeados */
+header nav ul li a:hover {
+    color: #ff007b;
 }
 
 /* Main Container */
 .main-container {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    min-height: 100vh;
-    padding: 20px;
+    padding: 50px 20px;
     text-align: center;
 }
 
-/* Form Container */
-.form-container {
+/* Content */
+.content {
+    max-width: 800px;
     background: rgba(255, 255, 255, 0.9);
+    color: #333;
     padding: 30px;
     border-radius: 10px;
-    max-width: 500px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-.form-container h1 {
-    color: #ff007b;
+/* Text Section */
+.text-section h1 {
     font-size: 2.5em;
-    margin: 0 0 10px 0;
+    color: #ff007b;
+    margin: 0;
 }
 
-.form-container h2 {
-    color: #1ed2f4;
+.text-section h2 {
     font-size: 1.5em;
+    color: #1ed2f4;
     margin: 5px 0;
 }
 
-.form-container p {
-    color: #333;
+.text-section p {
     font-size: 1em;
     margin: 10px 0;
+    color: #333;
 }
 
-/* Form Styles */
+/* Form Section */
+.form-section {
+    margin-top: 30px;
+}
+
 form {
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    margin-top: 20px;
+    align-items: center;
 }
 
 label {
+    margin-top: 10px;
     font-weight: bold;
-    text-align: left;
     color: #333;
 }
 
-input {
-    padding: 10px;
+input[type="text"],
+input[type="email"] {
+    padding: 15px;
+    margin-top: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    font-size: 1em;
+    font-size: 16px;
     width: 100%;
-    box-sizing: border-box;
+    max-width: 400px;
+    background-color: #ffffff; /* Fondo blanco para los campos */
 }
 
-input:focus {
+input[type="text"]:focus,
+input[type="email"]:focus {
     outline: none;
-    border-color: #ff007b;
+    border-color: #ff007b; /* Borde rosa al enfocarse */
     box-shadow: 0 0 5px rgba(255, 0, 123, 0.5);
 }
 
 .submit-button {
+    margin-top: 30px;
     background-color: #ff007b;
-    color: white;
+    color: #fff;
+    padding: 12px 20px;
     border: none;
-    padding: 15px;
     border-radius: 5px;
-    font-size: 1.2em;
+    font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 .submit-button:hover {
-    background-color: #e6006a;
+    background-color: #e6006a; /* Efecto hover para el botón */
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .main-container {
+        padding: 30px 20px;
+    }
+
+    .content {
+        padding: 20px;
+    }
 }
