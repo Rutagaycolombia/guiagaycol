@@ -74,18 +74,20 @@ header nav ul li a:hover {
 /* Form Section */
 .form-section {
     margin-top: 30px;
+    text-align: center; /* Centramos los textos y los campos */
 }
 
 form {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 15px; /* Espaciado uniforme entre los elementos */
 }
 
 label {
-    margin-top: 10px;
     font-weight: bold;
     color: #333;
+    text-align: center; /* Centramos los textos de las etiquetas */
 }
 
 input[type="text"],
