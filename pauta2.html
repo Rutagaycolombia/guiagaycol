@@ -8,28 +8,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-<!-- Header Section -->
-<header>
-    <div class="header-content">
-        <nav>
+    <!-- Header Section -->
+    <header>
+        <nav class="navigation-bar">
             <ul>
-                <li><a href="./index.html">INICIO</a></li>
+                <li><a href="./index.html" class="active">INICIO</a></li>
                 <li><a href="./pauta2.html">PAUTA CON NOSOTROS</a></li>
                 <li><a href="./sesion.html">INSCRÍBETE</a></li>
             </ul>
         </nav>
-    </div> 
-</header>
+    </header>
 
-<div class="main-container">
-    <div class="content">
-        <div class="text-section">
+    <!-- Main Content -->
+    <div class="main-container">
+        <div class="form-container">
             <h1>Guía Ruta Gay</h1>
             <h2>(Guía del ocio LGBTIQ+ / Friendly)</h2>
             <p>by Ruta Gay Colombia</p>
             <p>Es la alternativa digital de información turística, gastronómica, cultural, entretenimiento, ocio y bienestar enfocada en la comunidad LGBTIQ+.</p>
-        </div>
-        <div class="form-section">
+            
             <form id="registrationForm">
                 <label for="name">Nombre Completo:</label>
                 <input type="text" id="name" name="name" placeholder="Tu nombre" required>
@@ -41,16 +38,15 @@
             </form>
         </div>
     </div>
-</div>
 
-<script>
-    document.getElementById('registrationForm').addEventListener('submit', function(e) {
-        e.preventDefault();
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
+    <script>
+        document.getElementById('registrationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
 
-        alert(`¡Gracias, ${name}! Pronto recibirás la guía en tu correo: ${email}.`);
-    });
-</script>
+            alert(`¡Gracias, ${name}! Pronto recibirás la guía en tu correo: ${email}.`);
+        });
+    </script>
 </body>
 </html>
